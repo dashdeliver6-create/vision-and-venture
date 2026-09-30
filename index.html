@@ -1,15 +1,21 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>VISION & VENTURE</title>
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -18,41 +24,82 @@
             color: #1f2937;
         }
 
+        /* Navigation */
+        nav {
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #263b55;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            color: #263b55;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            opacity: 0.6;
+        }
+
+        /* Hero */
         header {
             background: linear-gradient(135deg, #172033, #3d526d);
             color: white;
             text-align: center;
-            padding: 70px 20px;
+            padding: 100px 20px;
         }
 
         header h1 {
-            font-size: 42px;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
+            font-size: 48px;
+            letter-spacing: 4px;
+            margin-bottom: 18px;
         }
 
         header p {
-            font-size: 18px;
+            font-size: 20px;
             opacity: 0.9;
         }
 
+        /* General Sections */
         .section {
             max-width: 1100px;
             margin: auto;
-            padding: 60px 20px;
+            padding: 70px 20px;
             text-align: center;
         }
 
         .section h2 {
-            font-size: 30px;
-            margin-bottom: 12px;
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #263b55;
         }
 
         .section-intro {
             color: #6b7280;
-            margin-bottom: 35px;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto 40px;
         }
 
+        /* Services */
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -63,7 +110,7 @@
             background: white;
             padding: 35px 25px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             transition: 0.3s;
         }
 
@@ -79,6 +126,7 @@
         .card h3 {
             font-size: 22px;
             margin-bottom: 12px;
+            color: #263b55;
         }
 
         .card p {
@@ -86,31 +134,74 @@
             line-height: 1.6;
         }
 
+        /* Buttons */
         .button {
             display: inline-block;
             margin-top: 25px;
-            padding: 12px 25px;
+            padding: 12px 26px;
             background: #263b55;
             color: white;
             text-decoration: none;
             border-radius: 25px;
+            transition: 0.3s;
         }
 
+        .button:hover {
+            opacity: 0.8;
+        }
+
+        /* About */
+        .about-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Contact */
+        .contact-box {
+            background: #e9eef4;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        /* Footer */
         footer {
             background: #172033;
             color: white;
             text-align: center;
             padding: 25px;
-            margin-top: 30px;
         }
 
+        /* Mobile */
         @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .menu {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
             header h1 {
-                font-size: 30px;
+                font-size: 32px;
+            }
+
+            header {
+                padding: 75px 20px;
             }
 
             .cards {
                 grid-template-columns: 1fr;
+            }
+
+            .about-box,
+            .contact-box {
+                padding: 25px;
             }
         }
     </style>
@@ -118,46 +209,139 @@
 
 <body>
 
-    <header>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">VISION & VENTURE</div>
+
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- Home -->
+    <header id="home">
         <h1>VISION & VENTURE</h1>
         <p>Explore • Create • Glow</p>
     </header>
 
-    <section class="section">
-        <h2>What We Do</h2>
+
+    <!-- About -->
+    <section class="section" id="about">
+
+        <h2>About Us</h2>
+
+        <div class="about-box">
+            <p class="section-intro">
+                VISION & VENTURE is a creative platform bringing together
+                travel, photography and natural beauty.
+                Our goal is to create meaningful experiences,
+                beautiful memories and thoughtful products.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+    <section class="section" id="services">
+
+        <h2>Our Services</h2>
+
         <p class="section-intro">
-            Discover our services and explore new possibilities.
+            Explore our different areas of creativity, adventure and beauty.
         </p>
 
         <div class="cards">
 
+            <!-- Organic Beauty -->
             <div class="card">
+
                 <div class="icon">🌿</div>
+
                 <h3>Organic Beauty</h3>
-                <p>Natural care, thoughtfully created for your everyday beauty.</p>
-                <a href="#" class="button">Explore</a>
+
+                <p>
+                    Natural care and thoughtfully created beauty products
+                    inspired by nature.
+                </p>
+
+                <a href="#contact" class="button">Explore</a>
+
             </div>
 
+
+            <!-- Photography -->
             <div class="card">
+
                 <div class="icon">📸</div>
+
                 <h3>Photography</h3>
-                <p>Beautifully capturing moments, memories and special occasions.</p>
-                <a href="#" class="button">View More</a>
+
+                <p>
+                    Capturing beautiful moments, memories and special
+                    occasions with creativity.
+                </p>
+
+                <a href="#contact" class="button">View More</a>
+
             </div>
 
+
+            <!-- Travel -->
             <div class="card">
+
                 <div class="icon">🏔️</div>
+
                 <h3>Travel & Tours</h3>
-                <p>Explore amazing places, experience new adventures and create memories.</p>
-                <a href="#" class="button">Explore</a>
+
+                <p>
+                    Explore amazing destinations, enjoy new experiences
+                    and create unforgettable memories.
+                </p>
+
+                <a href="#contact" class="button">Explore</a>
+
             </div>
 
         </div>
+
     </section>
 
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-box">
+
+            <p>
+                Have a question or want to work with us?
+                Get in touch with us.
+            </p>
+
+            <a href="mailto:your@email.com" class="button">
+                Email Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
     <footer>
-        <p>© 2026 VISION & VENTURE. All Rights Reserved.</p>
+
+        <p>
+            © 2026 VISION & VENTURE. All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>
 </html>
+```
