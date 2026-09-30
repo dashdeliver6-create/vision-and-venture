@@ -1,16 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION & VENTURE</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+        }
+
+        header {
+            background: linear-gradient(135deg, #172033, #3d526d);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            color: #6b7280;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #263b55;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        footer {
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
 <body>
 
-    <h1>VISION & VENTURE</h1>
-    <p>Explore • Create • Glow</p>
+    <header>
+        <h1>VISION & VENTURE</h1>
+        <p>Explore • Create • Glow</p>
+    </header>
 
-    <h2>🌿 Organic Beauty</h2>
-    <p>Natural care, thoughtfully created.</p>
+    <section class="section">
+        <h2>What We Do</h2>
+        <p class="section-intro">
+            Discover our services and explore new possibilities.
+        </p>
 
-    <h2>📸 Photography</h2>
-    <p>Moments captured beautifully.</p>
+        <div class="cards">
 
-    <h2>🏔️ Travel & Tours</h2>
-    <p>Explore. Experience. Remember.</p>
+            <div class="card">
+                <div class="icon">🌿</div>
+                <h3>Organic Beauty</h3>
+                <p>Natural care, thoughtfully created for your everyday beauty.</p>
+                <a href="#" class="button">Explore</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📸</div>
+                <h3>Photography</h3>
+                <p>Beautifully capturing moments, memories and special occasions.</p>
+                <a href="#" class="button">View More</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏔️</div>
+                <h3>Travel & Tours</h3>
+                <p>Explore amazing places, experience new adventures and create memories.</p>
+                <a href="#" class="button">Explore</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 VISION & VENTURE. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
