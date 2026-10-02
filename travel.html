@@ -1,156 +1,236 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Travel & Tours | VISION & VENTURE</title>
 
-```
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <style>
 
-    body {
-        font-family: Arial, sans-serif;
-        background: #f5f7fa;
-        color: #263b55;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    nav {
-        background: white;
-        padding: 18px 8%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7f5;
+            color: #26352a;
+        }
 
-    .logo {
-        font-size: 20px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
+        nav {
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
 
-    nav a {
-        color: #263b55;
-        text-decoration: none;
-        font-weight: bold;
-    }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #263b55;
+        }
 
-    .hero {
-        padding: 80px 20px;
-        text-align: center;
-        background: white;
-    }
+        nav a {
+            text-decoration: none;
+            color: #263b55;
+            font-weight: bold;
+        }
 
-    .hero h1 {
-        font-size: 42px;
-        margin-bottom: 15px;
-    }
+        .hero {
+            min-height: 520px;
 
-    .hero p {
-        color: #6b7280;
-        font-size: 18px;
-    }
+            background:
+                linear-gradient(
+                    rgba(10,20,15,0.50),
+                    rgba(10,20,15,0.50)
+                ),
+                url("travel1.jpg") center/cover;
 
-    .content {
-        max-width: 1100px;
-        margin: auto;
-        padding: 70px 20px;
-    }
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    .service {
-        background: white;
-        border-radius: 18px;
-        overflow: hidden;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        text-align: center;
-        padding-bottom: 35px;
-    }
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
 
-    .service img {
-        width: 100%;
-        max-height: 500px;
-        object-fit: cover;
-    }
+        .hero h1 {
+            font-size: 55px;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
 
-    .service h2 {
-        margin: 28px 0 12px;
-    }
+        .hero p {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
 
-    .service p {
-        color: #6b7280;
-        line-height: 1.7;
-        max-width: 650px;
-        margin: auto;
-        padding: 0 20px;
-    }
+        .section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 20px;
+            text-align: center;
+        }
 
-    .back {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 12px 25px;
-        background: #263b55;
-        color: white;
-        text-decoration: none;
-        border-radius: 25px;
-    }
+        .section h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
 
-    footer {
-        margin-top: 40px;
-        background: #172033;
-        color: white;
-        text-align: center;
-        padding: 25px;
-    }
-</style>
-```
+        .section p {
+            max-width: 700px;
+            margin: auto;
+            color: #68736b;
+            line-height: 1.8;
+        }
 
+        .travel-box {
+            background: white;
+            padding: 45px;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .travel-box img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 28px;
+            background: #263b55;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: 450px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .travel-box {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
 </head>
 
 <body>
 
-<nav>
-    <div class="logo">VISION & VENTURE</div>
-    <a href="index.html">Home</a>
-</nav>
+    <nav>
 
-<section class="hero">
-    <h1>Travel & Tours</h1>
-    <p>Explore. Experience. Remember.</p>
-</section>
+        <div class="logo">
+            VISION & VENTURE
+        </div>
 
-<section class="content">
+        <a href="index.html">
+            ← Back to Home
+        </a>
 
-```
-<div class="service">
+    </nav>
 
-    <img src="travel1.jpg" alt="Travel & Tours">
 
-    <h2>Explore With Us</h2>
+    <section class="hero">
 
-    <p>
-        Discover beautiful destinations and enjoy memorable journeys.
-        We create travel experiences designed around exploration,
-        comfort and unforgettable memories.
-    </p>
+        <div>
 
-    <a href="index.html" class="back">
-        Back to Home
-    </a>
+            <h1>
+                Travel & Tours
+            </h1>
 
-</div>
-```
+            <p>
+                Explore • Discover • Experience
+            </p>
 
-</section>
+        </div>
 
-<footer>
-    <p>© 2026 VISION & VENTURE. All Rights Reserved.</p>
-</footer>
+    </section>
+
+
+    <section class="section">
+
+        <h2>
+            Your Journey, Our Passion
+        </h2>
+
+        <p>
+            Discover beautiful destinations, exciting experiences
+            and unforgettable journeys with VISION & VENTURE.
+        </p>
+
+
+        <div class="travel-box">
+
+            <img
+                src="travel1.jpg"
+                alt="Travel and Tours"
+            >
+
+            <p>
+                We create memorable travel experiences designed
+                to help you explore new places, enjoy beautiful
+                landscapes and make memories that last a lifetime.
+            </p>
+
+            <a
+                href="index.html"
+                class="button"
+            >
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 VISION & VENTURE. All Rights Reserved.
+        </p>
+
+    </footer>
 
 </body>
 </html>
