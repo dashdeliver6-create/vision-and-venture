@@ -1,204 +1,208 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VISION & VENTURE</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+```
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #1f2937;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        color: #1f2937;
+    }
 
+    nav {
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 8%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #263b55;
+    }
+
+    .menu {
+        display: flex;
+        gap: 25px;
+    }
+
+    .menu a {
+        color: #263b55;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .menu a:hover {
+        opacity: 0.6;
+    }
+
+    .hero {
+        min-height: 600px;
+        background:
+            linear-gradient(rgba(15,25,40,0.55), rgba(15,25,40,0.55)),
+            url("hero.jpg") center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+    .section {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .section h2 {
+        font-size: 34px;
+        color: #263b55;
+        margin-bottom: 18px;
+    }
+
+    .intro {
+        max-width: 700px;
+        margin: 0 auto 45px;
+        color: #6b7280;
+        line-height: 1.8;
+    }
+
+    .about-box {
+        background: white;
+        padding: 45px;
+        border-radius: 18px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-7px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 28px 22px 30px;
+    }
+
+    .card h3 {
+        font-size: 23px;
+        color: #263b55;
+        margin-bottom: 12px;
+    }
+
+    .card p {
+        color: #6b7280;
+        line-height: 1.6;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 26px;
+        background: #263b55;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+    }
+
+    .button:hover {
+        opacity: 0.8;
+    }
+
+    .contact-box {
+        background: #e9eef4;
+        padding: 45px;
+        border-radius: 18px;
+    }
+
+    footer {
+        background: #172033;
+        color: white;
+        text-align: center;
+        padding: 25px;
+    }
+
+    @media(max-width: 700px) {
         nav {
-            background: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 8%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            color: #263b55;
+            flex-direction: column;
+            gap: 15px;
         }
 
         .menu {
-            display: flex;
-            gap: 25px;
-        }
-
-        .menu a {
-            color: #263b55;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .menu a:hover {
-            opacity: 0.6;
-        }
-
-        .hero {
-            min-height: 600px;
-            background:
-                linear-gradient(rgba(15,25,40,0.55), rgba(15,25,40,0.55)),
-                url("hero.jpg") center/cover;
-            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 40px 20px;
         }
 
         .hero h1 {
-            font-size: 55px;
-            letter-spacing: 5px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 22px;
-            letter-spacing: 2px;
-        }
-
-        .section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .section h2 {
             font-size: 34px;
-            color: #263b55;
-            margin-bottom: 18px;
         }
 
-        .intro {
-            max-width: 700px;
-            margin: 0 auto 45px;
-            color: #6b7280;
-            line-height: 1.8;
-        }
-
-        .about-box {
-            background: white;
-            padding: 45px;
-            border-radius: 18px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        .hero {
+            min-height: 500px;
         }
 
         .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            grid-template-columns: 1fr;
         }
 
-        .card {
-            background: white;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-7px);
-        }
-
-        .card img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 28px 22px 30px;
-        }
-
-        .card h3 {
-            font-size: 23px;
-            color: #263b55;
-            margin-bottom: 12px;
-        }
-
-        .card p {
-            color: #6b7280;
-            line-height: 1.6;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 26px;
-            background: #263b55;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-        }
-
-        .button:hover {
-            opacity: 0.8;
-        }
-
+        .about-box,
         .contact-box {
-            background: #e9eef4;
-            padding: 45px;
-            border-radius: 18px;
-        }
-
-        footer {
-            background: #172033;
-            color: white;
-            text-align: center;
             padding: 25px;
         }
+    }
+</style>
+```
 
-        @media(max-width: 700px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .menu {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 34px;
-            }
-
-            .hero {
-                min-height: 500px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .about-box,
-            .contact-box {
-                padding: 25px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -206,14 +210,16 @@
 <nav>
     <div class="logo">VISION & VENTURE</div>
 
-    <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+```
+<div class="menu">
+    <a href="index.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</div>
+```
 
+</nav>
 
 <section class="hero">
     <div>
@@ -222,136 +228,138 @@
     </div>
 </section>
 
-
 <section class="section" id="about">
 
-    <h2>About Us</h2>
+```
+<h2>About Us</h2>
 
-    <div class="about-box">
+<div class="about-box">
 
-        <img src="about-us.jpg"
-             alt="Vision & Venture"
-             style="width:100%; max-height:350px; object-fit:cover; border-radius:14px; margin-bottom:25px;">
+    <img src="about.jpg"
+         alt="Vision & Venture - Organic Beauty, Photography and Travel"
+         style="width:100%; max-height:350px; object-fit:cover; border-radius:14px; margin-bottom:25px;">
 
-        <p class="intro" style="margin-bottom:0;">
-            VISION & VENTURE is a creative platform bringing together
-            organic beauty, photography and travel experiences.
-            Our goal is to create beautiful experiences, meaningful memories
-            and thoughtful products inspired by creativity and nature.
-        </p>
+    <p class="intro" style="margin-bottom:0;">
+        VISION & VENTURE is a creative platform bringing together
+        organic beauty, photography and travel experiences.
+        Our goal is to create beautiful experiences, meaningful memories
+        and thoughtful products inspired by creativity and nature.
+    </p>
 
-    </div>
+</div>
+```
 
 </section>
-
 
 <section class="section" id="services">
 
-    <h2>Our Services</h2>
+```
+<h2>Our Services</h2>
 
-    <p class="intro">
-        Explore our world of beauty, creativity and adventure.
-    </p>
-
-
-    <div class="cards">
+<p class="intro">
+    Explore our world of beauty, creativity and adventure.
+</p>
 
 
-        <!-- ORGANIC BEAUTY -->
-
-        <div class="card">
-
-            <img src="beauty1.jpg" alt="Organic Beauty">
-
-            <div class="card-content">
-
-                <h3>Organic Beauty</h3>
-
-                <p>
-                    Natural and thoughtfully created beauty products
-                    inspired by nature.
-                </p>
-
-                <a href="beauty.html" class="button">
-                    Explore Beauty
-                </a>
-
-            </div>
-
-        </div>
+<div class="cards">
 
 
-        <!-- PHOTOGRAPHY -->
+    <!-- ORGANIC BEAUTY -->
 
-        <div class="card">
+    <div class="card">
 
-            <img src="photography1.jpg" alt="Photography">
+        <img src="beauty1.jpg" alt="Organic Beauty">
 
-            <div class="card-content">
+        <div class="card-content">
 
-                <h3>Photography</h3>
+            <h3>Organic Beauty</h3>
 
-                <p>
-                    Capturing beautiful moments, memories and
-                    special occasions with creativity.
-                </p>
+            <p>
+                Natural and thoughtfully created beauty products
+                inspired by nature.
+            </p>
 
-                <a href="photography.html" class="button">
-                    View Photography
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- TRAVEL -->
-
-        <div class="card">
-
-            <img src="travel1.jpg" alt="Travel & Tours">
-
-            <div class="card-content">
-
-                <h3>Travel & Tours</h3>
-
-                <p>
-                    Explore amazing destinations and create
-                    unforgettable travel memories.
-                </p>
-
-                <a href="travel.html" class="button">
-                    Explore Travel
-                </a>
-
-            </div>
+            <a href="beauty.html" class="button">
+                Explore Beauty
+            </a>
 
         </div>
 
     </div>
 
-</section>
 
+    <!-- PHOTOGRAPHY -->
+
+    <div class="card">
+
+        <img src="photography1.jpg" alt="Photography">
+
+        <div class="card-content">
+
+            <h3>Photography</h3>
+
+            <p>
+                Capturing beautiful moments, memories and
+                special occasions with creativity.
+            </p>
+
+            <a href="photography.html" class="button">
+                View Photography
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- TRAVEL -->
+
+    <div class="card">
+
+        <img src="travel1.jpg" alt="Travel & Tours">
+
+        <div class="card-content">
+
+            <h3>Travel & Tours</h3>
+
+            <p>
+                Explore amazing destinations and create
+                unforgettable travel memories.
+            </p>
+
+            <a href="travel.html" class="button">
+                Explore Travel
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
 
 <section class="section" id="contact">
 
-    <h2>Contact Us</h2>
+```
+<h2>Contact Us</h2>
 
-    <div class="contact-box">
+<div class="contact-box">
 
-        <p>
-            Have a question or want to work with us?
-            Get in touch with us.
-        </p>
+    <p>
+        Have a question or want to work with us?
+        Get in touch with us.
+    </p>
 
-        <a href="mailto:your@email.com" class="button">
-            Email Us
-        </a>
+    <a href="mailto:your@email.com" class="button">
+        Email Us
+    </a>
 
-    </div>
+</div>
+```
 
 </section>
-
 
 <footer>
     <p>© 2026 VISION & VENTURE. All Rights Reserved.</p>
