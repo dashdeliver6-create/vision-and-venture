@@ -98,41 +98,56 @@
         line-height: 1.8;
     }
 
-.about-box {
-    background: white;
-    padding: 45px;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    overflow: hidden;
-}
+    /* ABOUT US */
 
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+    .about-box {
+        background: white;
+        padding: 45px;
+        border-radius: 18px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        overflow: hidden;
+    }
 
-.card {
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
+    .about-box img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 14px;
+        margin: 0 auto 30px;
+    }
 
-.card:hover {
-    transform: translateY(-7px);
-}
+    /* SERVICES */
 
-.card img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-}
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
 
-.card-content {
-    padding: 28px 22px 30px;
-}
+    .card {
+        background: white;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-7px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .card-content {
+        padding: 28px 22px 30px;
+    }
+
     .card h3 {
         font-size: 23px;
         color: #263b55;
@@ -158,6 +173,8 @@
         opacity: 0.8;
     }
 
+    /* CONTACT */
+
     .contact-box {
         background: #e9eef4;
         padding: 45px;
@@ -168,190 +185,5 @@
         background: #172033;
         color: white;
         text-align: center;
-        padding: 25px;
-    }
-
-    @media(max-width: 700px) {
-        nav {
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .menu {
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .hero h1 {
-            font-size: 34px;
-        }
-
-        .hero {
-            min-height: 500px;
-        }
-
-        .cards {
-            grid-template-columns: 1fr;
-        }
-
-        .about-box,
-        .contact-box {
-            padding: 25px;
-        }
-    }
-</style>
+        padding
 ```
-
-</head>
-
-<body>
-
-<nav>
-    <div class="logo">VISION & VENTURE</div>
-
-```
-<div class="menu">
-    <a href="index.html">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-</div>
-```
-
-</nav>
-
-<section class="hero">
-    <div>
-        <h1>VISION & VENTURE</h1>
-        <p>Explore • Create • Glow</p>
-    </div>
-</section>
-
-<section class="section" id="about">
-
-```
-<h2>About Us</h2>
-
-<div class="about-box">
-
-    <img src="https://raw.githubusercontent.com/dashdeliver6-create/vision-and-venture/main/about.jpg"
-         alt="Vision & Venture - Organic Beauty, Photography and Travel"
-         style="display:block; width:100%; height:auto; max-width:100%; border-radius:14px; margin:0 auto 30px;">
-
-    <p class="intro" style="margin:0 auto;">
-        VISION & VENTURE is a creative platform bringing together
-        organic beauty, photography and travel experiences.
-        Our goal is to create beautiful experiences, meaningful memories
-        and thoughtful products inspired by creativity and nature.
-    </p>
-
-</div>
-```
-
-</section>
-
-
-    <!-- ORGANIC BEAUTY -->
-
-    <div class="card">
-
-        <img src="beauty1.jpg" alt="Organic Beauty">
-
-        <div class="card-content">
-
-            <h3>Organic Beauty</h3>
-
-            <p>
-                Natural and thoughtfully created beauty products
-                inspired by nature.
-            </p>
-
-            <a href="beauty.html" class="button">
-                Explore Beauty
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- PHOTOGRAPHY -->
-
-    <div class="card">
-
-        <img src="photography1.jpg" alt="Photography">
-
-        <div class="card-content">
-
-            <h3>Photography</h3>
-
-            <p>
-                Capturing beautiful moments, memories and
-                special occasions with creativity.
-            </p>
-
-            <a href="photography.html" class="button">
-                View Photography
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- TRAVEL -->
-
-    <div class="card">
-
-        <img src="travel1.jpg" alt="Travel & Tours">
-
-        <div class="card-content">
-
-            <h3>Travel & Tours</h3>
-
-            <p>
-                Explore amazing destinations and create
-                unforgettable travel memories.
-            </p>
-
-            <a href="travel.html" class="button">
-                Explore Travel
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-```
-
-</section>
-
-<section class="section" id="contact">
-
-```
-<h2>Contact Us</h2>
-
-<div class="contact-box">
-
-    <p>
-        Have a question or want to work with us?
-        Get in touch with us.
-    </p>
-
-    <a href="mailto:your@email.com" class="button">
-        Email Us
-    </a>
-
-</div>
-```
-
-</section>
-
-<footer>
-    <p>© 2026 VISION & VENTURE. All Rights Reserved.</p>
-</footer>
-
-</body>
-</html>
